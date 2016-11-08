@@ -10,7 +10,8 @@ RUN wget http://bundles.openttdcoop.org/opengfx/releases/LATEST/opengfx-0.5.4.zi
 RUN unzip opengfx-0.5.4.zip
 WORKDIR /opt/openttd-1.6.1-linux-generic-amd64
 
-EXPOSE 3979 3979 3978/udp 3979/udp
+EXPOSE 3979/tcp
+EXPOSE 3979/udp
 
 ENTRYPOINT ["./openttd"]
 CMD ["-D"]
